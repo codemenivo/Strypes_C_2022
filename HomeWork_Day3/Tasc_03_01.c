@@ -10,16 +10,20 @@ double currentNum, maxNum;
 int count = 3;
 maxNum = __DBL_MIN__;
 
-while (scanf("%lf", &currentNum) != EOF)
+while (count != 0)
 {
+    printf("Insert Real Number: ");
+    scanf("%lf", &currentNum);
     if (currentNum > maxNum)
     {
         maxNum = currentNum;
     }
     
-printf("%lf\n", maxNum);
+count--;
     
 }
+
+printf("The MAX number is: %lf\n", maxNum);
 
 
     return 0;
