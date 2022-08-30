@@ -5,33 +5,35 @@ int main()
 {
     double num1, num2;
     int endNum;
-    char simbol;
+    char simbol;       
+        
+        
+    while ((scanf("%d", &endNum)) != EOF)
+    {
 
-        printf("Please enter Math operation (+, -, *, /): ");
-        scanf("%c", &simbol);
         
         printf("Please enter real Num1: ");
         scanf("%lf", &num1);     
+
+        printf("Please enter Math operation (+, -, *, /): ");
+        scanf("%s", &simbol);       
  
         printf("Please enter real Num2: ");
         scanf("%lf", &num2);
-        
 
-    while (scanf("%d", &endNum) != EOF)
-    {
 
         switch (simbol)
         {
         case '+':
-            printf("%lf + %lf = %.2lf", num1, num2, (num1 + num2));
+            printf("%lf + %lf = %.2lf\n", num1, num2, (num1 + num2));
             break;
 
         case '-':
-            printf("%lf - (%lf) = %.2lf", num1, num2, (num1 - (num2)));
+            printf("%lf - (%lf) = %.2lf\n", num1, num2, (num1 - (num2)));
             break;
 
         case '*':
-            printf("%lf * %lf = %.2lf", num1, num2, (num1 * num2));
+            printf("%lf * %lf = %.2lf\n", num1, num2, (num1 * num2));
            break;
 
         case '/':
@@ -41,7 +43,7 @@ int main()
                 scanf("%lf", &num2);
             }
             
-            printf("%lf / %lf = %.2lf", num1, num2, (num1 / num2));
+            printf("%lf / %lf = %.2lf\n", num1, num2, (num1 / num2));
 
             break;
         
@@ -50,9 +52,9 @@ int main()
             break;
         }
 
+     
+         
     }
-    
-
 
 
 
