@@ -7,17 +7,25 @@ int main()
 
 {
   int checkEoF;
-  double a = 0, b = 0, c = 0, S = 0, P = 0;
+  double a, b, c, S, P;
 
-  while (scanf("%d", &checkEoF) != EOF)
+  
+    
+  while (scanf("%lf %lf %lf", &a, &b, &c) != EOF)  
   {
-    scanf("%lf, %lf, %lf", &a, &b, &c);    
-
-triangle(a, b, c, &S, &P);
-
+    int status = triangle(a, b, c, &S, &P);
+    if(status == -1)
+    {
+    printf("Invalid input values!\n");
+    }
+    else
+    {      
     printf("S = %.2lf\n", S);
     printf("P = %.2lf\n",P);
+    }
   }
+
+  
   
 
 
@@ -27,11 +35,23 @@ triangle(a, b, c, &S, &P);
 int triangle(double a, double b, double c, double* S, double* P)
 {
     double halfP;
+
+    if ((a <= 0) || (b <= 0) || (c <= 0))
+    {
+        return -1;  
+    }
+    else if ((a > (b + c)) || (b > (a + c)) || (c >(a + b)) )
+    {
+        return -1;
+    }
+    else
+    {
     halfP = (a + b + c) / 2;
 
     *P = a + b + c;
     
     *S = sqrt(halfP * (halfP - a) * (halfP - b) * (halfP - c));
 
-
+    return 0;
+    }
 }
