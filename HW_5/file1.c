@@ -1,6 +1,6 @@
-#include <stdio.h>
+//#include <stdio.h>
+#include "swap.h"
 
-void swap(int*, int*);
 
 int main(void)
 {
@@ -17,10 +17,10 @@ int main(void)
 
 /*
 
-ivo@ivo-ASUS-TUF-Gaming-F17-FX706HCB-FX706HCB:~/HomeWorks/HW_5$ gcc file1.c -o file1 -lm
-/usr/bin/ld: /tmp/cctYvsoz.o: in function `main':
-file1.c:(.text+0xa4): undefined reference to `swap'
-collect2: error: ld returned 1 exit status
-ivo@ivo-ASUS-TUF-Gaming-F17-FX706HCB-FX706HCB:~/HomeWorks/HW_5$ 
+ivo@ivo-ASUS-TUF-Gaming-F17-FX706HCB-FX706HCB:~/HomeWorks/HW_5$ ./file1
+Enter first number: 30
+Enter second number: 12
+Before swap: Num1 = 30, Num2 = 12
+After swap: Num1 = 12, Num2 = 30
 
 */
