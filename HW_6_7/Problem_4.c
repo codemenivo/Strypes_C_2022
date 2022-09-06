@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-void Conv(int sValue, char *pBuffer);
+void Conv(int sValue, char *pBuffer); //https://devenum.com/convert-int-to-string-in-c/
 
 int main()
 {
