@@ -21,5 +21,7 @@ void Add(const char* p1, const char* p2, char* result)
     sscanf(p2, "%d", &numP2);
     sumNum = numP1 + numP2;
     sprintf(result, "%d", sumNum);    
+    //https://www.educative.io/answers/how-to-read-data-using-sscanf-in-c
+    //https://www.geeksforgeeks.org/sprintf-in-c/
 
 }
