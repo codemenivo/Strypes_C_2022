@@ -11,7 +11,7 @@ int main()
 
 	int status = BinSearch(arr, sizeof(arr)/sizeof(arr[0]), 50);
 
-	if(status == -1)
+	if(status == 0xFFFF)
 	{
 		printf("The uValue is not match\n");
 	}
@@ -52,7 +52,7 @@ unsigned int BinSearch(unsigned int *pArray, int uArraySize, int uValue)
 				}
 				else if ((mid == 0) && (pArray[mid] != uValue))
 				{
-					backNum = -1;
+					backNum = 0xFFFF;
 					break;
 				}
 						
@@ -69,7 +69,7 @@ unsigned int BinSearch(unsigned int *pArray, int uArraySize, int uValue)
 				}
 				else if ((mid == (uArraySize - 1)) && (pArray[mid] != uValue))
 				{
-					backNum = -1;
+					backNum = 0xFFFF;
 					break;
 				}
 				
